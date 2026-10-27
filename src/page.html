@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- ===== SEO: title, description, social sharing ===== -->
+  <title>@@TITLE@@</title>
+  <meta name="description" content="@@DESC@@">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#029547">
+  <meta name="geo.region" content="IN-UP">
+  <meta name="geo.placename" content="Lucknow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Scholars’ Paradise International School">
+  <meta property="og:title" content="@@TITLE@@">
+  <meta property="og:description" content="@@DESC@@">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="@@TITLE@@">
+  <meta name="twitter:description" content="@@DESC@@">
+
+  <!-- ===== SEO: structured data (school, six campuses, FAQ) =====
+       TODO for the real site: add each campus' street address, geo coordinates and opening hours. -->
+  <script type="application/ld+json" id="ld-main">@@JSONLD@@</script>
+
+  <!-- ===== Fonts (preconnect makes them load faster) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --doodles: @@DOODLES@@; }  /* faint school-doodle pattern used behind the counters */
+@@CSS@@
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="progress-bar" id="progress-bar"></div>
+
+  <!-- ===== Presentation banner (remove before going live) ===== -->
+  <div class="concept-banner">Concept redesign by Tauseeb Khan · Not the official website · Content from scholarsgroup.in</div>
+
+  <!-- ===== Top bar: contact + social icons ===== -->
+  <div class="top-bar">
+    <div class="container">
+      <span>@@EMAIL@@ · @@PHONE@@</span>
+      @@SOCIAL_TOP@@
+    </div>
+  </div>
+
+  <!-- ===== Header + main navigation ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#">
+        <img src="data:image/webp;base64,@@LOGO@@" alt="Scholars’ Group of Institution logo" width="58" height="54">
+        <span><b style="color:#e5322d">Scholars’</b> <b style="color:var(--green)">Group of</b> <b style="color:#2b2a8c">Institution</b></span>
+      </a>
+      <a class="brand__admission" href="#admission" data-open-admission aria-label="Admission open 2026-27: apply now">
+        <img src="data:image/webp;base64,@@ADMISSION_IMG@@" alt="Admission open 2026-27" width="130" height="46">
+      </a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <nav class="main-nav" id="main-nav" aria-label="Main">@@NAV@@</nav>
+      <button class="btn" type="button" data-open-admission>Get Admission</button>
+    </div>
+  </header>
+
+  <!-- ===== Announcement ticker ===== -->
+  <div class="ticker" aria-label="Announcements">
+    <span class="ticker__label">LATEST</span>
+    <div class="ticker__viewport"><div class="ticker__track">@@TICKER@@</div></div>
+  </div>
+
+  <main id="main">
+
+    <!-- 01 HERO: one <h1> per page for SEO; slides use <h2> -->
+    <section class="hero" aria-label="Welcome">
+      <div class="container hero__layout">
+        <div>
+          <h1 class="hero__kicker">Best English Medium School in Lucknow | ICSE Curriculum | Scholars’ Paradise</h1>
+          <div class="hero__slide is-active">
+            <h2>Give your child the perfect start</h2>
+            <p>ICSE curriculum across 6 campuses in Lucknow. Nursery to Class 8, with value-based learning.</p>
+            <a class="btn btn--navy" href="#admission" data-open-admission>Admissions open 2026–27</a>
+          </div>
+          <div class="hero__slide">
+            <h2>LEAD smart classes in every classroom</h2>
+            <p>Digital tools and activity-based learning that help each child grow at their own pace.</p>
+            <a class="btn btn--navy" href="#why">See why parents choose us</a>
+          </div>
+          <div class="hero__slide">
+            <h2>Hifz e Quran with modern ICSE education</h2>
+            <p>Quran memorisation with Tajweed, alongside regular schooling.</p>
+            <a class="btn btn--navy" href="#page-hifz">Explore Hifz Academy</a>
+          </div>
+          <div class="hero__dots" id="hero-dots"></div>
+        </div>
+        @@SCENE@@
+      </div>
+    </section>
+
+    <div class="container">
+      <nav class="quick-links" aria-label="Quick links" data-improved="Info links and current notices in one place">
+        <a href="https://cisce.org/" target="_blank" rel="noopener">ICSE Board</a>
+        <a href="https://scholarship.up.gov.in/RegistrationNew.aspx" target="_blank" rel="noopener">UP Scholarship</a>
+        <a href="https://exams.nta.ac.in/NEET/" target="_blank" rel="noopener">NEET</a>
+        <a href="https://jeeadv.ac.in/" target="_blank" rel="noopener">JEE Advanced</a>
+        <a href="#admission" data-open-admission>📢 Admissions open 2026–27</a>
+      </nav>
+    </div>
+    <div class="marquee" aria-hidden="true"><div class="marquee__track">
+      <span>ICSE Curriculum</span><span>★ LEAD Smart Classes</span><span>Hifz Academy</span><span>★ Nursery to Class 8</span><span>6 Campuses</span><span>★ Value-based Learning</span>
+      <span>ICSE Curriculum</span><span>★ LEAD Smart Classes</span><span>Hifz Academy</span><span>★ Nursery to Class 8</span><span>6 Campuses</span><span>★ Value-based Learning</span>
+    </div></div>
+
+    <!-- 02 ABOUT (short introduction, like the live site) -->
+    <section class="section" id="about">
+      <div class="container split">
+        <div class="reveal">
+          <h2 class="section-title section-title--left reveal">About our school</h2>
+          <p>Scholars’ Group of Institutions offers education from Nursery to Class 8, aligned with the ICSE curriculum. Experienced faculty, technology, moral education and real-world skills shape future-ready learners in Lucknow.</p>
+          <p>Our early-years programme is play-based and hands-on for children aged 2 to 5, building problem-solving, communication and creativity.</p>
+          <a class="btn btn--green" href="#page-about">Read more about us</a>
+        </div>
+        <div class="reveal">@@CLASSROOM@@</div>
+      </div>
+    </section>
+
+    <!-- 03 NOTICE BOARD (admission, information and events, notices) -->
+    <section class="section" id="notices" data-improved="Notice board: every item opens its own page">
+      <div class="container">
+        <div class="eyebrow">Notice board</div>
+        <h2 class="section-title reveal">Notices &amp; announcements</h2>
+        <div class="notice-board">
+          <div class="reveal"><h3>Admission open</h3>
+            <a class="admission-box" href="#admission" data-open-admission><strong>Admissions Open 2026–27</strong><span>Enroll your child in the best English Medium School in Lucknow</span><em>Apply now →</em></a></div>
+          <div class="reveal"><h3>Information &amp; events</h3>
+            <a href="https://cisce.org/" target="_blank" rel="noopener">ICSE Board Official Site</a>
+            <a href="https://scholarship.up.gov.in/RegistrationNew.aspx" target="_blank" rel="noopener">UP Scholarship Site</a>
+            <a href="https://jeeadv.ac.in/" target="_blank" rel="noopener">JEE (Advance) Examination</a>
+            <a href="https://exams.nta.ac.in/NEET/" target="_blank" rel="noopener">NEET Examination</a></div>
+          <div class="reveal"><h3>Notices</h3>
+            <a href="#page-notice-admissions">Admissions Open 2026–27 <i class="badge">New</i></a>
+            <a href="#page-notice-annual">Annual Function Day 2024</a>
+            <a href="#page-notice-leave">Leave After Annual Function 2024</a>
+            <a href="#page-notice-winter">Winter Vacation Announcement</a>
+            <a href="#page-notices">View all notices →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 WHY CHOOSE US -->
+    <section class="section" id="why">
+      <div class="container">
+        <div class="eyebrow">Schools</div>
+        <h2 class="section-title reveal">Why choose us</h2>
+        <div class="grid">@@WHY@@</div>
+      </div>
+    </section>
+
+    <!-- 05 ACADEMICS -->
+    <section class="section" id="academics" data-improved="Academics section: curriculum and learning stages">
+      <div class="container">
+        <div class="eyebrow">Academics</div>
+        <h2 class="section-title reveal">ICSE curriculum from Nursery to Class 8</h2>
+        <div class="grid grid--wide">@@ACADEMICS@@</div>
+      </div>
+    </section>
+
+    <!-- 06 COUNTERS (same figures as the live site) -->
+    <section class="section--pattern" aria-labelledby="stats-title" data-improved="Counters animate when scrolled into view">
+      <div class="container">
+        <h2 class="sr-only" id="stats-title">Our school in numbers</h2>
+        <div class="stats">@@STATS@@</div>
+      </div>
+    </section>
+
+    <!-- 07 CAMPUSES: one card per campus, then a finder with a map -->
+    <section class="section" id="campuses" data-improved="Every campus has its own animated card and a full campus page">
+      <div class="container">
+        <div class="eyebrow">Our campuses</div>
+        <h2 class="section-title reveal">Six campuses, one family</h2>
+        <div class="grid">@@CAMPUS_CARDS@@</div>
+      </div>
+    </section>
+
+    <section class="section" id="finder" data-improved="Interactive campus finder instead of a plain text list">
+      <div class="container">
+        <h2 class="section-title reveal">Find your nearest campus</h2>
+        <div class="split">
+          <div class="finder">
+            <label for="finder-area">Where do you live?</label>
+            <select id="finder-area"><option value="">Select your area</option>@@AREA_OPTIONS@@</select>
+            <div class="finder__result" id="finder-result" aria-live="polite"></div>
+            <p class="muted">Demo mapping; the map is schematic, not to scale. Addresses and phone numbers per campus are to be added by the school.</p>
+          </div>
+          <div class="finder__map">
+            <svg viewBox="0 0 400 300" role="img" aria-label="Schematic map of the six campuses in Lucknow">
+              <ellipse cx="200" cy="150" rx="170" ry="125" fill="none" stroke="#dfe3f0" stroke-width="10"/>
+              <path d="M30 190 Q150 120 240 170 T380 110" fill="none" stroke="#6fb7e6" stroke-width="8" opacity=".6"/>
+              <text x="44" y="212" style="fill:#4a9ccc">Gomti river</text><text x="168" y="112" style="opacity:.45">Lucknow</text>
+              @@PINS@@
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 FACILITIES -->
+    <section class="section" id="facilities" data-improved="Facilities section: safety, smart classes and student-teacher ratio">
+      <div class="container">
+        <div class="eyebrow">Facilities</div>
+        <h2 class="section-title reveal">Safe, modern and caring campuses</h2>
+        <div class="grid grid--wide">@@FACILITIES@@</div>
+      </div>
+    </section>
+
+    <!-- 09 VENTURES -->
+    <section class="section" id="ventures">
+      <div class="container">
+        <h2 class="section-title reveal">Our ventures</h2>
+        <div class="grid grid--wide">@@VENTURES@@</div>
+      </div>
+    </section>
+
+    <!-- 10 LIFE AT SCHOLARS' (illustrated activity scenes; swap in real photos on the live site) -->
+    <section class="section" id="life" data-improved="Each card shows its own activity (drawn illustrations stand in for the school’s photos)">
+      <div class="container">
+        <h2 class="section-title reveal">Life at Scholars’</h2>
+        <div class="gallery">@@GALLERY@@</div>
+      </div>
+    </section>
+
+    <!-- 11 VOICES: parent reviews + social reels -->
+    <section class="section" id="voices">
+      <div class="container split">
+        <div>
+          <h2 class="section-title section-title--left reveal">What parents say</h2>
+          <div class="testimonial-dots" id="testimonial-dots"></div>
+          <div class="testimonial" id="testimonial">
+            <img data-logo alt="Scholars’ Group logo" width="52">
+            @@TESTIMONIALS@@
+          </div>
+        </div>
+        <div id="social" data-improved="Social feed: reels play as soon as they scroll into view">
+          <h2 class="section-title section-title--left reveal">From our social feed</h2>
+          <!-- On the live site, replace each .reel__screen with the Instagram embed, e.g.
+               <iframe src="https://www.instagram.com/reel/REEL_ID/embed" loading="lazy" allowfullscreen></iframe> -->
+          <div class="reels">@@REELS@@</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 BLOG -->
+    <section class="section" id="blogs">
+      <div class="container">
+        <h2 class="section-title reveal">Latest blogs</h2>
+        <div class="grid">@@BLOGS@@</div>
+      </div>
+    </section>
+
+    <!-- 13 FAQ (also in the structured data above) -->
+    <section class="section" id="faq" data-improved="FAQ: answers parents search for, also marked up as FAQ data">
+      <div class="container">
+        <div class="eyebrow">FAQ</div>
+        <h2 class="section-title reveal">Frequently asked questions</h2>
+        <div class="faq">@@FAQ@@</div>
+      </div>
+    </section>
+
+    <!-- 14 ADMISSION ENQUIRY -->
+    <section class="section" id="admission">
+      <div class="container">
+        <h2 class="section-title reveal">Admission enquiry</h2>
+        <form class="enquiry" id="enquiry-form" novalidate data-improved="Two-step form that also asks for the area, so the nearest campus can call back">
+          <div class="form-steps" aria-hidden="true"><span class="is-active"></span><span></span></div>
+          <div class="form-step is-active field">
+            <label for="enq-name">Parent name</label><input id="enq-name" autocomplete="name">
+            <label for="enq-mobile">Mobile</label><input id="enq-mobile" inputmode="tel" autocomplete="tel">
+            <button class="btn btn--green" type="button" id="enq-next">Next</button>
+          </div>
+          <div class="form-step field">
+            <label for="enq-class">Class</label><select id="enq-class">@@CLASS_OPTIONS@@</select>
+            <label for="enq-area">Area</label><select id="enq-area">@@AREA_OPTIONS@@</select>
+            <button class="btn btn--green" type="submit">Send enquiry</button>
+          </div>
+          <p class="form-message" id="enq-message" role="status"></p>
+          <h3 style="margin-top:24px">What happens next</h3>
+          <p>The campus nearest to your area receives your enquiry and calls you back. Enquiries are visible only to school staff.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 15 CONTACT STRIP -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="eyebrow">Contact</div>
+        <h2 class="section-title reveal">Visit or contact Scholars’ Paradise</h2>
+        <div class="grid grid--wide">@@CONTACT@@</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer__cta">
+        <div><b>Admissions open 2026–27</b><br>Nursery to Class 8 · six campuses in Lucknow</div>
+        <a class="btn btn--green" href="#admission" data-open-admission style="color:#fff">Apply now</a>
+      </div>
+      <div class="footer__grid">
+        <div class="footer__col">
+          <img class="footer__logo" data-logo alt="Scholars’ Group logo" width="70">
+          <p style="margin:10px 0"><b>Scholars’ Group of Institutions</b><br>Unit of Sir Syed Educational And Welfare Trust</p>
+          <p>ICSE curriculum · LEAD smart classes · Value-based learning</p>
+          @@SOCIAL_FOOT@@
+        </div>
+        <div class="footer__col"><h3>Our Branches</h3>@@FOOTER_BRANCHES@@
+          <p class="muted">Addresses and per-campus phone numbers will be added by the school.</p></div>
+        <div class="footer__col"><h3>Quick Links</h3>
+          <a href="#page-about">About</a><a href="#why">Why choose us</a><a href="#campuses">Campuses</a><a href="#page-ventures">Ventures</a>
+          <a href="#page-notices">Notices</a><a href="#page-blogs">Blogs</a><a href="#page-contact">Contact</a><a href="#admission" data-open-admission>Admission enquiry</a>
+          <h3 style="margin-top:18px">Important Links</h3>
+          <a href="https://scholarsgroup.in/privacy-policy/">Privacy Policy</a><a href="https://scholarsgroup.in/disclaimer/">Disclaimer</a><a href="https://scholarsgroup.in/terms-conditions/">Terms &amp; Conditions</a></div>
+        <div class="footer__col"><h3>Contact Us!</h3>
+          <a href="mailto:@@EMAIL@@"><b>@@EMAIL@@</b></a><a href="tel:@@PHONE_HREF@@"><b>@@PHONE@@</b></a>
+          <a href="https://wa.me/@@PHONE_HREF@@" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+      </div>
+      <p class="footer__legal">Copyright © 2026 Scholars’ Group of Institutions | Unit of Sir Syed Educational And Welfare Trust<br>
+        <small>Concept redesign by Tauseeb Khan, MCA (Integral University) · <a href="https://tauseeb-khan.github.io/Portfolio/">Data portfolio</a></small></p>
+    </div>
+  </footer>
+
+  <!-- ===== Floating buttons ===== -->
+  <a class="float-whatsapp" href="https://wa.me/@@PHONE_HREF@@" target="_blank" rel="noopener">WhatsApp</a>
+  <button class="float-toggle" id="toggle-changes" type="button" aria-pressed="false">Show my changes</button>
+
+  <!-- ===== Admission pop-up (opens automatically once per visit) ===== -->
+  <div class="modal" id="admission-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__dialog field">
+      <button class="modal__close" id="modal-close" type="button" aria-label="Close">×</button>
+      <h3 id="modal-title">Admission enquiry 2026–27</h3>
+      <p>Fill in the details and the nearest campus will call you back.</p>
+      <form id="modal-form" novalidate>
+        <label for="m-name">Parent name</label><input id="m-name" autocomplete="name">
+        <label for="m-mobile">Mobile</label><input id="m-mobile" inputmode="tel" autocomplete="tel">
+        <label for="m-class">Class</label><select id="m-class">@@CLASS_OPTIONS@@</select>
+        <label for="m-area">Area</label><select id="m-area">@@AREA_OPTIONS@@</select>
+        <button class="btn btn--green" type="submit">Send enquiry</button>
+        <p class="form-message" id="m-message" role="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Overlay used for menu pages and campus pages (filled by script.js) ===== -->
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" hidden></div>
+
+  <script>
+@@JS@@
+  </script>
+</body>
+</html>
